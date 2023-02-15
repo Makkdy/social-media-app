@@ -1,0 +1,12 @@
+name: build and deploy app
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      name: pulling repo
+      uses: acrtion/checkout@v2
+      name: saying hii to mubbaseer
+      run: echo "Hii Mubbaseer"
+
