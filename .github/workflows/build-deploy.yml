@@ -1,6 +1,5 @@
-name: build and deploy app
-
-on: push
+name: build and deploy the application
+on: [push, pull_request]
 
 jobs:
   job1:
@@ -8,6 +7,5 @@ jobs:
     steps:
       - name: pulling repo
         uses: actions/checkout@v2
-      - name: saying hii to mubbaseer
-        run: echo "Hii Mubbaseer"
-
+      - name: saying Hii
+        run: echo "saying Hii"
