@@ -1,11 +1,17 @@
-name: build and deploy the application
-on: [push, pull_request]
+name: build and deploy app
+on: [push,pull_request]
 
 jobs:
-  job1:
-    runs-on: ubuntu-latest
-    steps:
-      - name: pulling repo
-        uses: actions/checkout@v2
-      - name: saying Hii
-        run: echo "saying Hii"
+    job1:
+      runs-on: ubuntu-latest
+      steps:
+        - name: pulling github repo
+          uses: actions/checkout@v2
+        - name: installing python
+          uses: actions/setup-python@v2
+          with:
+            python-version: "3.9"
+        - name: update pip
+          run: python -m pip install --upgrade pip
+        - name: Installing all our dependencies
+          run: pip install -r requirements.txt
