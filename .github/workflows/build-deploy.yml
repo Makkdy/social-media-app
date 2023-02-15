@@ -5,8 +5,8 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      name: pulling repo
+      -name: pulling repo
       uses: actions/checkout@v2
-      name: saying hii to mubbaseer
+      -name: saying hii to mubbaseer
       run: echo "Hii Mubbaseer"
 
